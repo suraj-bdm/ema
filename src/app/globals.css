@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root, html {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    /* Fluid Responsive Base Font Size: Scales smoothly from 13.5px on small mobile to 16px on desktop to 17px on large displays */
+    font-size: clamp(13.5px, 0.85rem + 0.32vw, 16.5px);
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    background-color: #F4F6FA;
+    color: #181C32;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.012em;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+  }
+
+  /* Universal Unified Typography for all headings and interactive elements */
+  h1, h2, h3, h4, h5, h6, button, input, select, textarea, p, span, a {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #181C32;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+
+  /* Ensure any font-serif class also unifies into clean Inter */
+  .font-serif {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  }
+}
+
+/* Fluid Responsive Typography Utilities */
+.fluid-hero-title {
+  font-size: clamp(1.2rem, 0.95rem + 1.4vw, 2.15rem);
+  line-height: 1.16;
+}
+
+.fluid-section-title {
+  font-size: clamp(1.2rem, 1rem + 1.1vw, 1.85rem);
+  line-height: 1.25;
+}
+
+.fluid-card-title {
+  font-size: clamp(1rem, 0.92rem + 0.45vw, 1.28rem);
+  line-height: 1.32;
+}
+
+/* Dynamic Screen-Height Viewport Fit for Hero Section */
+.hero-viewport-fit {
+  height: auto;
+}
+
+/* Mobile & Tablet Banner card: 2:1 ratio matching 300x150 visual spec */
+.hero-banner-card {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}
+
+/* Mobile & Tablet Carousel card min-height */
+.hero-carousel-card {
+  min-height: 280px;
+  height: 100%;
+}
+
+@media (min-width: 640px) {
+  .hero-carousel-card {
+    min-height: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-viewport-fit {
+    /* Perfectly fit in the screen viewport without cutting off cards */
+    min-height: 340px;
+    max-height: 460px;
+    height: clamp(340px, calc(100vh - 210px), 440px);
+    height: clamp(340px, calc(100dvh - 210px), 440px);
+  }
+
+  /* Desktop Carousel card: exact flex-fill */
+  .hero-carousel-card {
+    min-height: 340px;
+    height: 100%;
+  }
+
+  /* Desktop Banner card: exact flex-fill 50/50 without bottom cropping */
+  .hero-banner-card {
+    aspect-ratio: auto;
+    flex: 1 1 0%;
+    min-height: 150px;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-viewport-fit {
+    min-height: 380px;
+    max-height: 500px;
+    height: clamp(380px, calc(100vh - 215px), 480px);
+    height: clamp(380px, calc(100dvh - 215px), 480px);
+  }
+
+  .hero-carousel-card {
+    min-height: 380px;
+  }
+
+  .hero-banner-card {
+    min-height: 175px;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}

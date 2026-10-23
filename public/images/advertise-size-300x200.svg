@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Deep Luxury Royal Burgundy/Crimson Background Gradient -->
+    <linearGradient id="bgGrad300x200" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0404" />
+      <stop offset="40%" stop-color="#450A0A" />
+      <stop offset="70%" stop-color="#7F1D1D" />
+      <stop offset="100%" stop-color="#180303" />
+    </linearGradient>
+
+    <!-- Metallic Gold Ribbon Gradient -->
+    <linearGradient id="goldRibbon300x200" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="25%" stop-color="#FDE047" />
+      <stop offset="50%" stop-color="#CA8A04" />
+      <stop offset="75%" stop-color="#FEF08A" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <!-- Pill Button Metallic Gradient -->
+    <linearGradient id="pillGold300x200" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CA8A04" />
+      <stop offset="30%" stop-color="#FACC15" />
+      <stop offset="50%" stop-color="#FEF08A" />
+      <stop offset="70%" stop-color="#FACC15" />
+      <stop offset="100%" stop-color="#A16207" />
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="shadow300x200" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <radialGradient id="centerGlow300x200" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#DA251D" stop-opacity="0.3" />
+      <stop offset="65%" stop-color="#7F1D1D" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- 1. Background (100% Edge-to-Edge Solid Fill) -->
+  <rect width="100%" height="100%" fill="url(#bgGrad300x200)" />
+  <rect width="100%" height="100%" fill="url(#centerGlow300x200)" />
+
+  <!-- 2. Elegant Flowing Golden Wave Ribbons -->
+  <path d="M-10,35 Q80,-5 150,30 T310,18" fill="none" stroke="url(#goldRibbon300x200)" stroke-width="2.2" />
+  <path d="M-10,48 Q90,8 160,40 T310,28" fill="none" stroke="#FDE047" stroke-width="0.8" stroke-opacity="0.4" />
+  <path d="M-10,165 Q80,205 160,160 T310,180" fill="none" stroke="url(#goldRibbon300x200)" stroke-width="2.2" />
+  <path d="M-10,178 Q90,215 170,172 T310,192" fill="none" stroke="#FDE047" stroke-width="0.8" stroke-opacity="0.4" />
+
+  <!-- 3. Fine Golden Inner Border -->
+  <rect x="1" y="1" width="298" height="198" fill="none" stroke="url(#goldRibbon300x200)" stroke-width="1" stroke-opacity="0.3" />
+
+  <!-- 4. Sparkles -->
+  <circle cx="35" cy="40" r="1.5" fill="#FDE047" opacity="0.7" />
+  <circle cx="265" cy="35" r="1.5" fill="#FDE047" opacity="0.7" />
+  <circle cx="45" cy="160" r="1.5" fill="#FDE047" opacity="0.7" />
+  <circle cx="255" cy="165" r="1.5" fill="#FDE047" opacity="0.7" />
+
+  <!-- 5. Main Text: ADVERTISE WITH US -->
+  <text 
+    x="150" 
+    y="78" 
+    text-anchor="middle" 
+    font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+    font-size="17" 
+    font-weight="900" 
+    letter-spacing="2" 
+    fill="#FFFFFF" 
+    filter="url(#shadow300x200)"
+  >
+    ADVERTISE WITH US
+  </text>
+
+  <!-- 6. Metallic Gold Pill Badge: SIZE: 300 x 200 PX -->
+  <g filter="url(#shadow300x200)">
+    <rect 
+      x="50" 
+      y="98" 
+      width="200" 
+      height="34" 
+      rx="17" 
+      fill="url(#pillGold300x200)" 
+      stroke="#FEF08A" 
+      stroke-width="1.2"
+    />
+    <text 
+      x="150" 
+      y="120" 
+      text-anchor="middle" 
+      font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+      font-size="13" 
+      font-weight="900" 
+      letter-spacing="1" 
+      fill="#450A0A"
+    >
+      SIZE: 300 x 200 PX
+    </text>
+  </g>
+
+  <!-- 7. Subtitle: Ratio & Format -->
+  <text 
+    x="150" 
+    y="158" 
+    text-anchor="middle" 
+    font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+    font-size="11" 
+    font-weight="600" 
+    letter-spacing="1" 
+    fill="#FCA5A5" 
+    opacity="0.95"
+  >
+    ECAM Portal  •  JPG / PNG / SVG
+  </text>
+</svg>

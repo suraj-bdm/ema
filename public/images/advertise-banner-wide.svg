@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 180" preserveAspectRatio="xMidYMid meet" width="100%" height="100%">
+  <defs>
+    <!-- Background Burgundy / Crimson Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0404" />
+      <stop offset="45%" stop-color="#450A0A" />
+      <stop offset="100%" stop-color="#180303" />
+    </linearGradient>
+
+    <!-- Golden Metallic Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#CA8A04" />
+      <stop offset="30%" stop-color="#FACC15" />
+      <stop offset="70%" stop-color="#FEF08A" />
+      <stop offset="100%" stop-color="#EAB308" />
+    </linearGradient>
+
+    <linearGradient id="goldButton" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAB308" />
+      <stop offset="50%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#CA8A04" />
+    </linearGradient>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.3" flood-color="#000000" />
+    </filter>
+
+    <!-- Subtle Wave Lines -->
+    <linearGradient id="waveLine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FACC15" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#EF4444" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FACC15" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="680" height="180" rx="14" fill="url(#bgGrad)" />
+
+  <!-- Ambient Wave Graphic Flourishes -->
+  <path d="M-20,140 Q180,40 380,110 T700,50" fill="none" stroke="url(#waveLine)" stroke-width="2" />
+  <path d="M-20,160 Q220,60 420,130 T700,70" fill="none" stroke="url(#goldGrad)" stroke-width="1.2" stroke-opacity="0.3" />
+  <path d="M50,0 Q260,150 480,20 T700,160" fill="none" stroke="url(#waveLine)" stroke-width="1" stroke-opacity="0.2" />
+
+  <!-- Outer 1px Gold Precision Border -->
+  <rect x="1" y="1" width="678" height="178" rx="13" fill="none" stroke="#FACC15" stroke-opacity="0.3" stroke-width="1" />
+
+  <!-- Center Decorative Glow -->
+  <circle cx="340" cy="90" r="140" fill="#DA251D" opacity="0.15" filter="blur(40px)" />
+
+  <!-- Left: Megaphone Badge Icon -->
+  <g transform="translate(68, 90)">
+    <circle r="36" fill="#DA251D" stroke="url(#goldGrad)" stroke-width="1.5" filter="url(#softShadow)" />
+    <!-- Megaphone SVG Path -->
+    <path d="M-10,-10 L4,-18 L4,18 L-10,10 Z M4,-10 L16,-6 L16,6 L4,10 Z M-14,-4 L-10,-4 L-10,4 L-14,4 Z M-6,10 L-2,20 L3,18 L-1,10 Z" fill="#FACC15" />
+  </g>
+
+  <!-- Middle: Text Content -->
+  <g transform="translate(130, 0)">
+    <!-- Small Category Tag -->
+    <text x="0" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FACC15" letter-spacing="1.5">
+      ECAM PREMIER SPONSOR SHOWCASE
+    </text>
+
+    <!-- Main Headline -->
+    <text x="0" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" letter-spacing="0.5" filter="url(#softShadow)">
+      ADVERTISE WITH US
+    </text>
+
+    <!-- Subtitle / Audience reach -->
+    <text x="0" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="500" fill="#FCA5A5">
+      Reach 3,000+ Verified Electrical Contractors, Engineers &amp; EPC Firms
+    </text>
+
+    <!-- Specs indicator -->
+    <text x="0" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#E2E8F0" letter-spacing="0.5">
+      SLOT SIZE: 680 × 180 PX • PREMIUM VISIBILITY
+    </text>
+  </g>
+
+  <!-- Right: CTA Button -->
+  <g transform="translate(565, 90)" cursor="pointer">
+    <rect x="-80" y="-22" width="160" height="44" rx="22" fill="url(#goldButton)" filter="url(#softShadow)" />
+    <text x="0" y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="900" fill="#450A0A" letter-spacing="0.4">
+      BOOK NOW →
+    </text>
+  </g>
+</svg>
