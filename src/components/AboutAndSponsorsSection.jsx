@@ -108,20 +108,17 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
               {/* President's Message & Official Leadership Card */}
               <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-[#DA251D]/30 transition-all">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-5">
-                  {/* President Emblem / Monogram */}
+                  {/* President Photo */}
                   <div className="shrink-0 flex flex-col items-center">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-[#DA251D]/30 shadow-sm p-2 bg-gradient-to-br from-[#991B1B] via-[#DA251D] to-[#B71C1C] text-white flex flex-col items-center justify-center text-center group">
-                      <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono tracking-wider">
-                        ECA
-                      </span>
-                      <span className="text-[8px] uppercase font-bold tracking-widest text-white/90 mt-0.5">
-                        PRESIDENT
-                      </span>
-                      <span className="text-[7px] text-amber-200/80 font-mono">
-                        2026-2027
-                      </span>
+                    <div className="w-22 h-26 sm:w-26 sm:h-30 rounded-2xl overflow-hidden border-2 border-[#DA251D]/30 shadow-md bg-gradient-to-b from-slate-100 to-slate-200 group">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="/images/devang-thakur-president.jpg"
+                        alt="Shri Devang Thakur - President, ECAM"
+                        className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                      />
                     </div>
-                    <span className="mt-1.5 text-[9.5px] font-bold text-[#DA251D] uppercase tracking-wider px-2 py-0.5 bg-red-50 border border-red-200/80 rounded-full">
+                    <span className="mt-1.5 text-[9.5px] font-bold text-[#DA251D] uppercase tracking-wider px-2 py-0.5 bg-red-50 border border-red-200/80 rounded-full shadow-2xs">
                       PRESIDENT
                     </span>
                   </div>

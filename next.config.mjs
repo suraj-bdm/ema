@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  allowedDevOrigins: ["dial-explore-remarks-housewares.trycloudflare.com"],
+  allowedDevOrigins: ["changing-demonstrate-mph-amazing.trycloudflare.com"],
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "dial-explore-remarks-housewares.trycloudflare.com",
+        hostname: "changing-demonstrate-mph-amazing.trycloudflare.com",
       },
     ],
   },
