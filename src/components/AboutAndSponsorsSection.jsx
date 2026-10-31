@@ -50,7 +50,7 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
       <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         
         {/* 1. Official Sponsored Ribbon Banners - 1 Row, 2 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4 lg:gap-5 mb-7 sm:mb-9">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-6 sm:mb-8">
           {/* Column 1: Polycab Cables & Wires */}
           <div
             onClick={onOpenAdvertise}
@@ -80,12 +80,12 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
           </div>
         </div>
 
-        {/* 2. Split Content Row: Left Overview & Right Alliance Partners */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+        {/* 2. Split Content Row: Left Overview & Right Alliance Partners (Exact 50/50 Matching Top Banners Width) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
           
-          {/* Left Column (7 cols): Editorial Overview & Institutional Pillars */}
-          <div className="lg:col-span-7 flex flex-col justify-between">
-            <div className="space-y-4 sm:space-y-4.5 flex flex-col justify-between h-full">
+          {/* Left Column: Editorial Overview & Institutional Pillars (Matches Col 1 Banner Width Exactly) */}
+          <div className="flex flex-col">
+            <div className="space-y-4 sm:space-y-4.5 flex flex-col">
               
               {/* Pillar 1: What is EMA */}
               <div className="p-4 sm:p-5 md:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(39,52,133,0.06)] hover:shadow-md hover:border-[#273485]/40 transition-all">
@@ -158,8 +158,8 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
             </div>
           </div>
 
-          {/* Right Column (5 cols): Sponsored Showcase - 6 Fixed 270x226 Cards Edge-to-Edge */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
+          {/* Right Column: Sponsored Showcase - Matches Col 2 Banner Width Exactly */}
+          <div className="flex flex-col justify-between">
             <div className="grid grid-cols-2 gap-3.5 sm:gap-4">
               {sponsorPartners.map((partner) => (
                 <div

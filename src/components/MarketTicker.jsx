@@ -8,31 +8,36 @@ const EMA_LATEST_UPDATES = [
   },
   {
     id: 'update-2',
-    tag: 'EVENT',
-    text: 'EMA — NYGT 2025: New Year Get Together & Member Fellowship Meet at Kalbadevi, Mumbai',
+    tag: 'UPCOMING EVENT',
+    text: 'EMA GenNEXT 5.0 – 2026 on 1st October 2026: Youth Leadership & Innovation Conclave',
   },
   {
     id: 'update-3',
-    tag: 'SPORTS',
-    text: 'EMA Premier League (EPL) — Annual Sports Meet Cricket & Football Tournament (Turf 1 & 2)',
+    tag: 'UPCOMING EVENT',
+    text: 'NYGT – 2026 on 16th November 2026: Annual New Year Get Together & Member Fellowship Meet',
   },
   {
     id: 'update-4',
-    tag: 'AGM',
-    text: '88th Annual General Meeting (AGM) 2024–25 & Electrical Industry Conclave',
+    tag: 'WELFARE GALA',
+    text: 'Staff Welfare Entertainment Programme on 28th November 2026 in Mumbai',
   },
   {
     id: 'update-5',
+    tag: 'INDUSTRY TOUR',
+    text: 'Jabalpur & Bandhavgarh Tour on 8th January 2027: Member Trade & Wildlife Delegation',
+  },
+  {
+    id: 'update-6',
+    tag: 'SPORTS LEAGUE',
+    text: 'EPL-FCM on 7th February 2027: EMA Premier League & Friendly Cricket Tournament',
+  },
+  {
+    id: 'update-7',
     tag: 'DIRECTORY',
     text: 'EMA Membership Directory Updation & Online Member Search active on emamumbai.com',
   },
   {
-    id: 'update-6',
-    tag: 'TRADE NOTICE',
-    text: 'Official Representation on GST Reforms & Kalbadevi Wholesale Electrical Market Guidelines',
-  },
-  {
-    id: 'update-7',
+    id: 'update-8',
     tag: 'MOBILE APP',
     text: 'Download Official EMA Mumbai Mobile Application on Google Play Store & Apple App Store',
   },
