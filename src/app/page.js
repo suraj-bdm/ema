@@ -30,7 +30,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F4F6FA] text-[#181C32] font-sans antialiased selection:bg-[#DA251D] selection:text-white" id="top">
+    <div className="min-h-screen bg-[#F4F6FA] text-[#181C32] font-sans antialiased selection:bg-[#273485] selection:text-white" id="top">
       {/* 1. Navbar */}
       <Navbar
         onOpenLogin={() => setLoginModalOpen(true)}
@@ -40,7 +40,7 @@ export default function Home() {
       />
 
       <main>
-        {/* 2. Hero Section: 100 Years of ECAM & ECAMEX 2026 Showcase */}
+        {/* 2. Hero Section: 90th Milestone Year of EMA (Estd. 1937) Showcase */}
         <HeroSection
           onOpenJoin={() => setJoinModalOpen(true)}
           onOpenAbout={() => handleNavigateSection('about')}
@@ -50,24 +50,24 @@ export default function Home() {
         {/* 3. Live Market & Energy Ticker Strip */}
         <MarketTicker />
 
-        {/* 4. Featured Sponsor Banner & About ECAM Overview Showcase */}
+        {/* 4. Featured Sponsor Banner & About EMA Overview Showcase */}
         <AboutAndSponsorsSection
           onOpenAbout={() => handleNavigateSection('about')}
           onOpenJoin={() => setJoinModalOpen(true)}
           onOpenAdvertise={() => setAdvertiseModalOpen(true)}
         />
 
-        {/* 5. Split Row: Upcoming Events (ECAMEX26) & Latest News */}
+        {/* 5. Split Row: Upcoming Events (Granite Jubilee) & Latest News */}
         <EventsAndNews
           onSelectEvent={(evt) => setSelectedEvent(evt)}
           onSelectNews={(news) => {
             setSelectedEvent({
               title: news.title,
-              type: 'ECAM CIRCULAR',
+              type: 'EMA CIRCULAR',
               date: news.date,
               time: 'Official Release',
-              venue: 'ECAM Secretariat, Stock Exchange Towers, Dalal St, Mumbai',
-              desc: `Official documentation and circular regarding "${news.title}" published by the Electrical Contractors' Association of Maharashtra for all registered members.`,
+              venue: 'EMA Secretariat, Ajmera Midtown, Kalbadevi Rd, Mumbai',
+              desc: `Official documentation and circular regarding "${news.title}" published by The Electric Merchants' Association for all registered trade members.`,
             });
           }}
         />

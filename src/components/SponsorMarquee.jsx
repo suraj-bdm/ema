@@ -8,47 +8,72 @@ export default function SponsorMarquee({ onOpenAdvertise }) {
   const pauseUntilRef = useRef(0);
   const animFrameRef = useRef(null);
 
-  // 8 Prominent Strategic Sponsor Visual Banner Slots (Size: 300 x 150 px, Ratio 2:1)
+  // Official Strategic Sponsor & Feature Banners from EMA Mumbai
   const sponsorBanners = [
     {
       id: 'sponsor-banner-1',
-      title: 'Sponsor Showcase Banner - Slot 1 (Size: 300 x 150 px)',
-      image: '/images/advertise-size-300x150.svg',
+      title: 'PRABHAT WIRES LLP — Official EMA Partner',
+      image: '/images/prabhat-wires-300x200.jpg',
     },
     {
       id: 'sponsor-banner-2',
-      title: 'Sponsor Showcase Banner - Slot 2 (Size: 300 x 150 px)',
-      image: '/images/advertise-size-300x150.svg',
+      title: 'PRABHAT CABLES PVT LTD — Official EMA Partner',
+      image: '/images/prabhat-cables-300x200.jpg',
     },
     {
       id: 'sponsor-banner-3',
-      title: 'Sponsor Showcase Banner - Slot 3 (Size: 300 x 150 px)',
-      image: '/images/advertise-size-300x150.svg',
+      title: 'VASHI ELECTRICALS — Official Partner',
+      image: '/images/vashi-electricals-ad.gif',
     },
     {
       id: 'sponsor-banner-4',
-      title: 'Sponsor Showcase Banner - Slot 4 (Size: 300 x 150 px)',
-      image: '/images/advertise-size-300x150.svg',
+      title: 'RR KABEL — Official Partner',
+      image: '/images/rr-kabel-ad.gif',
     },
     {
       id: 'sponsor-banner-5',
-      title: 'Sponsor Showcase Banner - Slot 5 (Size: 300 x 150 px)',
-      image: '/images/advertise-size-300x150.svg',
+      title: 'OSRAM LIGHTING — Official EMA Partner',
+      image: '/images/osram.gif',
     },
     {
       id: 'sponsor-banner-6',
-      title: 'Sponsor Showcase Banner - Slot 6 (Size: 300 x 150 px)',
-      image: '/images/advertise-size-300x150.svg',
+      title: 'GRACE CABLES & WIRES — Official Partner',
+      image: '/images/grace.gif',
     },
     {
       id: 'sponsor-banner-7',
-      title: 'Sponsor Showcase Banner - Slot 7 (Size: 300 x 150 px)',
-      image: '/images/advertise-size-300x150.svg',
+      title: 'SURELOCK ELECTRICALS — Official Partner',
+      image: '/images/2731644040046_Banner-Gif-213-X-156px_(2).gif',
     },
     {
       id: 'sponsor-banner-8',
-      title: 'Sponsor Showcase Banner - Slot 8 (Size: 300 x 150 px)',
-      image: '/images/advertise-size-300x150.svg',
+      title: 'CITROEN SWITCHGEARS — Official Partner',
+      image: '/images/4991634227077_3.gif',
+    },
+    {
+      id: 'sponsor-banner-9',
+      title: 'UNIQUE CABLES — Official Partner',
+      image: '/images/5831634227052_2.gif',
+    },
+    {
+      id: 'sponsor-banner-10',
+      title: 'NK ELECTRICALS — Official Partner',
+      image: '/images/nk-electricals-ad.jpg',
+    },
+    {
+      id: 'sponsor-banner-11',
+      title: 'PRECISION PIPES — Official Partner',
+      image: '/images/precision-pipes-ad.jpg',
+    },
+    {
+      id: 'sponsor-banner-12',
+      title: 'EMA Managing Committee — 90th Milestone Year',
+      image: '/images/ema-committee-card.png',
+    },
+    {
+      id: 'sponsor-banner-13',
+      title: 'EMA Premier League — Annual Sports Meet',
+      image: '/images/ema-premier-league-card.png',
     },
   ];
 
@@ -140,7 +165,7 @@ export default function SponsorMarquee({ onOpenAdvertise }) {
           <button
             type="button"
             onClick={handlePrev}
-            className="absolute left-1 sm:left-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-[#DA251D] text-[#DA251D] hover:text-white border border-slate-300 shadow-xl flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110 active:scale-95 backdrop-blur-md"
+            className="absolute left-1 sm:left-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-[#273485] text-[#273485] hover:text-white border border-slate-300 shadow-xl flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110 active:scale-95 backdrop-blur-md"
             title="Previous"
             aria-label="Previous sponsors"
           >
@@ -151,7 +176,7 @@ export default function SponsorMarquee({ onOpenAdvertise }) {
           <button
             type="button"
             onClick={handleNext}
-            className="absolute right-1 sm:right-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-[#DA251D] text-[#DA251D] hover:text-white border border-slate-300 shadow-xl flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110 active:scale-95 backdrop-blur-md"
+            className="absolute right-1 sm:right-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-[#273485] text-[#273485] hover:text-white border border-slate-300 shadow-xl flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110 active:scale-95 backdrop-blur-md"
             title="Next"
             aria-label="Next sponsors"
           >
@@ -167,14 +192,14 @@ export default function SponsorMarquee({ onOpenAdvertise }) {
               <div
                 key={`${banner.id}-${index}`}
                 onClick={onOpenAdvertise}
-                className="w-[260px] sm:w-[300px] md:w-[340px] lg:w-[360px] h-[145px] sm:h-[165px] md:h-[185px] lg:h-[195px] shrink-0 bg-[#180A0A] rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#DA251D]/40 flex items-center justify-center transition-all duration-300 hover:scale-[1.02] group/card select-none cursor-pointer overflow-hidden"
-                title="Click to Advertise - Size: 300 x 150 px"
+                className="w-[240px] sm:w-[270px] md:w-[290px] aspect-[300/200] shrink-0 bg-white rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#273485]/50 flex items-center justify-center transition-all duration-300 hover:scale-[1.02] group/card select-none cursor-pointer overflow-hidden"
+                title={banner.title}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={banner.image}
                   alt={banner.title}
-                  className="w-full h-full object-cover object-center block group-hover/card:scale-[1.02] transition-transform duration-300"
+                  className="w-full h-full object-cover block group-hover/card:scale-105 transition-transform duration-300"
                 />
               </div>
             ))}

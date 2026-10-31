@@ -1,37 +1,47 @@
 'use client';
 
 export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpenAdvertise }) {
-  // 6 Fixed-Size Strategic Sponsor Slots (242 x 235 PX)
+  // 8 Official Strategic Sponsor Cards from emamumbai.com matching 270x226 exact specs
   const sponsorPartners = [
     {
       id: 'partner-slot-1',
-      title: 'Advertise With Us - Slot 1 (Size: 242 x 235 px)',
-      image: '/images/advertise-size-242x235.svg',
+      title: 'NK ELECTRICALS — Official EMA Partner',
+      image: '/images/nk-electricals-ad.jpg',
     },
     {
       id: 'partner-slot-2',
-      title: 'Advertise With Us - Slot 2 (Size: 242 x 235 px)',
-      image: '/images/advertise-size-242x235.svg',
+      title: 'RR KABEL — Official EMA Partner',
+      image: '/images/rr-kabel-ad.gif',
     },
     {
       id: 'partner-slot-3',
-      title: 'Advertise With Us - Slot 3 (Size: 242 x 235 px)',
-      image: '/images/advertise-size-242x235.svg',
+      title: 'KEI INDUSTRIES — Official EMA Partner',
+      image: '/images/kei-industries-ad.jpg',
     },
     {
       id: 'partner-slot-4',
-      title: 'Advertise With Us - Slot 4 (Size: 242 x 235 px)',
-      image: '/images/advertise-size-242x235.svg',
+      title: 'PRECISION PIPES — Official EMA Partner',
+      image: '/images/precision-pipes-ad.jpg',
     },
     {
       id: 'partner-slot-5',
-      title: 'Advertise With Us - Slot 5 (Size: 242 x 235 px)',
-      image: '/images/advertise-size-242x235.svg',
+      title: 'VASHI ELECTRICALS — Official EMA Partner',
+      image: '/images/vashi-electricals-ad.gif',
     },
     {
       id: 'partner-slot-6',
-      title: 'Advertise With Us - Slot 6 (Size: 242 x 235 px)',
-      image: '/images/advertise-size-242x235.svg',
+      title: 'EAGLE SALES CORPORATION — Official Partner',
+      image: '/images/eagle-sales-ad.png',
+    },
+    {
+      id: 'partner-slot-7',
+      title: 'OSRAM LIGHTING — Official EMA Partner',
+      image: '/images/osram.gif',
+    },
+    {
+      id: 'partner-slot-8',
+      title: 'GRACE CABLES & WIRES — Official EMA Partner',
+      image: '/images/grace.gif',
     },
   ];
 
@@ -39,36 +49,34 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
     <section className="pt-0 pb-8 sm:pb-12" id="about">
       <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         
-        {/* 1. Dual Strategic Sponsored Banners (1 Row me 2 Images with increased height) */}
-        <div className="mb-7 sm:mb-9">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            {/* Image 1: Premier Showcase / Advertise Banner Slot (Size: 700 x 180 px, Ratio 3.8:1) */}
-            <div
-              onClick={onOpenAdvertise}
-              className="rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 bg-[#180A0A] group cursor-pointer aspect-[700/180] w-full relative"
-              title="Advertise With Us - Size: 700 x 180 px"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/advertise-size-700x180.svg"
-                alt="Advertise With ECAM - Size: 700 x 180 px"
-                className="w-full h-full object-cover object-center block group-hover:scale-[1.02] transition-transform duration-300"
-              />
-            </div>
+        {/* 1. Official Sponsored Ribbon Banners - 1 Row, 2 Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4 lg:gap-5 mb-7 sm:mb-9">
+          {/* Column 1: Polycab Cables & Wires */}
+          <div
+            onClick={onOpenAdvertise}
+            className="w-full rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xs hover:shadow-md transition-all duration-300 bg-white group cursor-pointer aspect-[800/175] flex items-center justify-center"
+            title="Polycab Cables & Wires — Official EMA Sponsored Partner"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/polycab-col1-cables.png"
+              alt="Polycab Cables & Wires — India's Safe, Happy Connection"
+              className="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-300 block"
+            />
+          </div>
 
-            {/* Image 2: Premier Showcase / Advertise Banner Slot (Size: 700 x 180 px, Ratio 3.8:1) */}
-            <div
-              onClick={onOpenAdvertise}
-              className="rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 bg-[#180A0A] group cursor-pointer aspect-[700/180] w-full relative"
-              title="Advertise With Us - Size: 700 x 180 px"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/advertise-size-700x180.svg"
-                alt="Advertise With ECAM - Size: 700 x 180 px"
-                className="w-full h-full object-cover object-center block group-hover:scale-[1.02] transition-transform duration-300"
-              />
-            </div>
+          {/* Column 2: Polycab Electrical Solutions & FMEG */}
+          <div
+            onClick={onOpenAdvertise}
+            className="w-full rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xs hover:shadow-md transition-all duration-300 bg-white group cursor-pointer aspect-[800/175] flex items-center justify-center"
+            title="Polycab Electrical Solutions — Lights, Fans & Switches"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/polycab-col2-appliances.png"
+              alt="Polycab Electrical Solutions — Lights, Fans & Switches"
+              className="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-300 block"
+            />
           </div>
         </div>
 
@@ -79,68 +87,68 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
           <div className="lg:col-span-7 flex flex-col justify-between">
             <div className="space-y-4 sm:space-y-4.5 flex flex-col justify-between h-full">
               
-              {/* Pillar 1: What is ECAM */}
-              <div className="p-4 sm:p-5 md:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-[#DA251D]/30 transition-all">
-                <span className="text-[10px] sm:text-[11px] font-bold text-[#DA251D] tracking-wider uppercase block mb-1.5">
-                  APEX ELECTRICAL CONTRACTING BODY (ESTD. 1925 • CENTENARY)
+              {/* Pillar 1: What is EMA */}
+              <div className="p-4 sm:p-5 md:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(39,52,133,0.06)] hover:shadow-md hover:border-[#273485]/40 transition-all">
+                <span className="text-[10px] sm:text-[11px] font-bold text-[#273485] tracking-wider uppercase block mb-1.5">
+                  APEX ELECTRICAL TRADE BODY (ESTD. 1937 • 90TH YEAR)
                 </span>
                 <h3 className="fluid-card-title font-bold text-[#18181B] mb-2">
-                  What is ECAM?
+                  What is The Electric Merchants&apos; Association (EMA)?
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
-                  <strong className="text-black font-bold">ECAM (Electrical Contractors&apos; Association of Maharashtra)</strong> is the premier national-level body of Licensed electrical contractors, electrical traders, and allied associates including manufacturers, engineers, and consultants. Founded in 1925, ECAM has a PAN-Maharashtra presence with its headquarters in The Stock Exchange Towers, Mumbai and active regional divisions across Pune, Nashik, Thane, Kokan, Ahilyanagar, Jalgaon, and Western Maharashtra, proudly uniting over 3,000+ active members.
+                  <strong className="text-black font-bold">The Electric Merchants&apos; Association (EMA)</strong> is a premier, non-profit body established in 1937 serving the electrical industry and trade with the primary objective of safeguarding and promoting the collective interests of the sector. Headquartered at Ajmera Midtown, Kalbadevi Road, Mumbai, EMA represents manufacturers, dealers, distributors, stockists, suppliers, importers, exporters, and contractors across India, fostering mutual cooperation, ethical business practices, and resolution of trade challenges.
                 </p>
               </div>
 
-              {/* Pillar 2: Core Objectives & Standards */}
-              <div className="p-4 sm:p-5 md:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-[#DA251D]/30 transition-all">
-                <span className="text-[10px] sm:text-[11px] font-bold text-[#DA251D] tracking-wider uppercase block mb-1.5">
-                  CORE OBJECTIVES &amp; A COMMITMENT TO EXCELLENCE
+              {/* Pillar 2: Need & Objectives */}
+              <div className="p-4 sm:p-5 md:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(219,30,54,0.06)] hover:shadow-md hover:border-[#DB1E36]/40 transition-all">
+                <span className="text-[10px] sm:text-[11px] font-bold text-[#DB1E36] tracking-wider uppercase block mb-1.5">
+                  UNITY, PROGRESS &amp; MUTUAL CO-OPERATION
                 </span>
                 <h3 className="fluid-card-title font-bold text-[#18181B] mb-2">
-                  Advancing Safety &amp; Industry Standards
+                  Need for an Association &amp; Core Objectives
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
-                  ECAM unites the electrical fraternity into a well-knit organisation committed to high business morality and skilled workmanship. Key mandates include advancing electrical safety education and research, formulating electrical codes &amp; guidelines in cooperation with the Bureau of Indian Standards (BIS), liaising with IEEMA &amp; IMC, and organising premier trade expositions like ECAMEX.
+                  To associate is to share; to share is to feel one with all those connected with the electrical industry and trade. Out of unity emerges a united voice and strength for the articulation of problems, for constructive solutions, and for better commercial prospects. EMA actively organizes trade conclaves, maintains the comprehensive member directory, publishes official circulars and journals, and facilitates trade dispute resolution.
                 </p>
               </div>
 
               {/* President's Message & Official Leadership Card */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-[#DA251D]/30 transition-all">
+              <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(39,52,133,0.06)] hover:shadow-md hover:border-[#273485]/40 transition-all">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-5">
                   {/* President Photo */}
                   <div className="shrink-0 flex flex-col items-center">
-                    <div className="w-22 h-26 sm:w-26 sm:h-30 rounded-2xl overflow-hidden border-2 border-[#DA251D]/30 shadow-md bg-gradient-to-b from-slate-100 to-slate-200 group">
+                    <div className="w-22 h-26 sm:w-26 sm:h-30 rounded-2xl overflow-hidden border-2 border-[#273485]/40 shadow-md bg-gradient-to-b from-slate-100 to-slate-200 group">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src="/images/devang-thakur-president.jpg"
-                        alt="Shri Devang Thakur - President, ECAM"
+                        src="/images/parin-parikh-president.jpg"
+                        alt="Shri Parin Rajesh Parikh - President, The Electric Merchants' Association (EMA)"
                         className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
-                    <span className="mt-1.5 text-[9.5px] font-bold text-[#DA251D] uppercase tracking-wider px-2 py-0.5 bg-red-50 border border-red-200/80 rounded-full shadow-2xs">
+                    <span className="mt-1.5 text-[9.5px] font-bold text-[#DB1E36] uppercase tracking-wider px-2 py-0.5 bg-[#FEF2F2] border border-red-200 rounded-full shadow-2xs">
                       PRESIDENT
                     </span>
                   </div>
 
                   {/* Message Content */}
                   <div className="flex-1 text-center sm:text-left min-w-0">
-                    <span className="text-[10px] sm:text-[11px] font-bold text-[#DA251D] tracking-wider uppercase block mb-1">
-                      LEADERSHIP PERSPECTIVE
+                    <span className="text-[10px] sm:text-[11px] font-bold text-[#273485] tracking-wider uppercase block mb-1">
+                      HONOURING OUR LEGACY. INSPIRING OUR FUTURE.
                     </span>
                     <h3 className="fluid-card-title font-bold text-[#18181B] mb-1">
-                      President&apos;s Message
+                      President&apos;s Desk — 90th Milestone Year
                     </h3>
                     <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed italic font-normal">
-                      &ldquo;Welcome to the Electrical Contractors&apos; Association of Maharashtra. As we celebrate 100 years of glorious service, ECAM continues to stand as the undisputed voice of India&apos;s electrical contracting community. We are devoted to promoting electrical safety, renewable energy adoption, professional licensing standards, and member welfare through ECAMEX 2026 and our statewide network.&rdquo;
+                      &ldquo;It is a matter of great pride and honour to serve as the President of The Electric Merchants’ Association, Mumbai, especially in this landmark year as EMA celebrates its 90th year — the Granite Jubilee. For nine decades, EMA has stood as a strong and respected platform for the electrical trade fraternity, bringing together generations of members through relationships built on trust, unity, collaboration, and mutual growth. Together, we can create an association that is rooted in our rich heritage and prepared for the future.&rdquo;
                     </p>
                     <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
                       <div>
-                        <p className="text-xs font-bold text-[#18181B]">Shri Devang Thakur</p>
-                        <p className="text-[10px] text-slate-500 font-medium">President, ECAM • Devang Electricals, Nashik</p>
+                        <p className="text-xs font-bold text-[#18181B]">Shri Parin Rajesh Parikh</p>
+                        <p className="text-[10px] text-slate-500 font-medium">President, The Electric Merchants&apos; Association (EMA)</p>
                       </div>
-                      <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
-                        Centenary: 1925 - 2025/26
+                      <span className="text-[10px] font-semibold text-[#273485] bg-[#EEF2FF] px-2 py-0.5 rounded-md border border-[#273485]/20">
+                        Granite Jubilee: 1937 - 2027
                       </span>
                     </div>
                   </div>
@@ -150,21 +158,21 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
             </div>
           </div>
 
-          {/* Right Column (5 cols): Sponsored Showcase - 6 Fixed Cards (242 x 235 px) */}
-          <div className="lg:col-span-5 flex flex-col h-full">
-            <div className="grid grid-cols-2 grid-rows-3 gap-3.5 sm:gap-4 h-full flex-1">
+          {/* Right Column (5 cols): Sponsored Showcase - 6 Fixed 270x226 Cards Edge-to-Edge */}
+          <div className="lg:col-span-5 flex flex-col justify-between">
+            <div className="grid grid-cols-2 gap-3.5 sm:gap-4">
               {sponsorPartners.map((partner) => (
                 <div
                   key={partner.id}
                   onClick={onOpenAdvertise}
-                  className="relative w-full aspect-[242/235] lg:aspect-auto h-full min-h-[145px] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xs hover:shadow-md transition-all duration-300 bg-[#180A0A] group cursor-pointer flex"
-                  title="Click to Advertise - Size: 242 x 235 px"
+                  className="relative w-full aspect-[270/226] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#273485]/50 transition-all duration-300 bg-white group cursor-pointer flex items-center justify-center"
+                  title={partner.title}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`${partner.image}?v=5`}
+                    src={partner.image}
                     alt={partner.title}
-                    className="w-full h-full object-fill block group-hover:scale-[1.02] transition-transform duration-300"
+                    className="w-full h-full object-cover block group-hover:scale-[1.03] transition-transform duration-300"
                   />
                 </div>
               ))}
@@ -173,19 +181,19 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
 
         </div>
 
-        {/* 3. Centenary Metric Stats - Full Width Row */}
+        {/* 3. 90th Milestone Year Metric Stats - Full Width Row */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-5 mt-6 sm:mt-8">
-          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#DA251D]/30 transition-all text-center">
-            <p className="text-2xl sm:text-3xl font-black text-[#DA251D] tracking-tight">1925</p>
-            <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Founded Year (Centenary Era)</p>
+          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#273485]/40 transition-all text-center group">
+            <p className="text-2xl sm:text-3xl font-black text-[#273485] tracking-tight group-hover:scale-105 transition-transform">1937</p>
+            <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Estd. Year (90th Granite Jubilee)</p>
           </div>
-          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#DA251D]/30 transition-all text-center">
-            <p className="text-2xl sm:text-3xl font-black text-[#DA251D] tracking-tight">3,000+</p>
-            <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Active Licensed Members</p>
+          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#DB1E36]/40 transition-all text-center group">
+            <p className="text-2xl sm:text-3xl font-black text-[#DB1E36] tracking-tight group-hover:scale-105 transition-transform">Thousands</p>
+            <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Connected Electrical Traders</p>
           </div>
-          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#DA251D]/30 transition-all text-center">
-            <p className="text-2xl sm:text-3xl font-black text-[#DA251D] tracking-tight">100%</p>
-            <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Safety &amp; BIS Codes</p>
+          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#273485]/40 transition-all text-center group">
+            <p className="text-2xl sm:text-3xl font-black text-[#273485] tracking-tight group-hover:scale-105 transition-transform">Apex Forum</p>
+            <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Trade Welfare &amp; Arbitration</p>
           </div>
         </div>
 

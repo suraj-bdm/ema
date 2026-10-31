@@ -50,106 +50,148 @@ export default function Footer({ onNavigateSection, onOpenAdvertise }) {
   };
 
   return (
-    <footer className="bg-white border-t border-slate-200/90 pt-10 pb-8 mt-4" id="contact">
+    <footer className="bg-white border-t-4 border-[#273485] pt-10 pb-8 mt-4" id="contact">
       <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-8 items-start">
-          {/* Col 1: Brand (3 cols) */}
-          <div className="lg:col-span-3">
-            <a href="#top" className="inline-block mb-3 group" title="Return to Top">
+          {/* Col 1: Brand (4 cols) */}
+          <div className="lg:col-span-4">
+            <a href="#top" className="inline-block mb-3 group" title="The Electric Merchants' Association — Estd. 1937">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/ecam-logo.png"
-                alt="ECAM Logo - Electrical Contractors' Association of Maharashtra"
-                className="h-14 sm:h-16 md:h-[72px] lg:h-[80px] w-auto max-w-[320px] sm:max-w-[400px] object-contain object-left block transition-transform group-hover:scale-[1.01]"
+                src="/images/ema-logo.png"
+                alt="EMA Mumbai Logo - The Electric Merchants' Association"
+                className="h-11 sm:h-12 lg:h-13 w-auto max-w-full object-contain object-left block transition-transform group-hover:scale-[1.01]"
               />
             </a>
             <p className="text-[12.5px] font-semibold text-slate-700 leading-relaxed max-w-sm">
-              Electrical Contractors&apos; Association of Maharashtra (Estd. 1925). Apex pioneer body uniting 3,000+ licensed contractors, engineers, and traders across India.
+              The Electric Merchants&apos; Association (Estd. 1937). Apex non-profit trade body celebrating its 90th Milestone Year (Granite Jubilee), serving electrical manufacturers, distributors, stockists, and merchants across India.
             </p>
           </div>
 
-          {/* Col 2: Quick Links (3 cols, clean 2-column list) */}
-          <div className="lg:col-span-3">
-            <h6 className="text-[12.5px] font-extrabold text-[#18181B] uppercase tracking-wider mb-3">
+          {/* Col 2: Quick Links (2 cols) */}
+          <div className="lg:col-span-2">
+            <h6 className="text-[12.5px] font-extrabold text-[#273485] uppercase tracking-wider mb-3">
               QUICK LINKS
             </h6>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 text-[12.5px] font-bold text-slate-700">
-              <a href="#top" onClick={() => handleNav('top')} className="hover:text-[#DA251D] hover:underline transition-colors leading-relaxed">
+            <div className="flex flex-col space-y-2 text-[12.5px] font-bold text-slate-700">
+              <a href="#top" onClick={() => handleNav('top')} className="hover:text-[#DB1E36] hover:underline transition-colors leading-relaxed">
                 Home
               </a>
-              <a href="#news" onClick={() => handleNav('news')} className="hover:text-[#DA251D] hover:underline transition-colors leading-relaxed">
-                GR &amp; Circulars
+              <a href="#about" onClick={() => handleNav('about')} className="hover:text-[#DB1E36] hover:underline transition-colors leading-relaxed">
+                About EMA
               </a>
-              <a href="#about" onClick={() => handleNav('about')} className="hover:text-[#DA251D] hover:underline transition-colors leading-relaxed">
-                About ECAM
+              <a href="#about" onClick={() => handleNav('about')} className="hover:text-[#DB1E36] hover:underline transition-colors leading-relaxed">
+                President&apos;s Desk
               </a>
-              <a href="#events" onClick={() => handleNav('events')} className="hover:text-[#DA251D] hover:underline transition-colors leading-relaxed">
-                ECAMEX 2026
+              <a href="#about" onClick={() => handleNav('about')} className="hover:text-[#DB1E36] hover:underline transition-colors leading-relaxed">
+                Managing Committee
               </a>
-              <a href="#membership" onClick={() => handleNav('membership')} className="hover:text-[#DA251D] hover:underline transition-colors leading-relaxed">
-                Membership
+              <a href="#events" onClick={() => handleNav('events')} className="hover:text-[#DB1E36] hover:underline transition-colors leading-relaxed">
+                Granite Jubilee 2026
+              </a>
+              <a href="#events" onClick={() => handleNav('events')} className="hover:text-[#DB1E36] hover:underline transition-colors leading-relaxed">
+                EMA Circulars
+              </a>
+              <a href="#membership" onClick={() => handleNav('membership')} className="hover:text-[#DB1E36] hover:underline transition-colors leading-relaxed">
+                Become a Member
               </a>
               {onOpenAdvertise ? (
                 <button
                   type="button"
                   onClick={onOpenAdvertise}
-                  className="hover:text-[#DA251D] hover:underline transition-colors text-left cursor-pointer font-bold leading-relaxed"
+                  className="hover:text-[#DB1E36] hover:underline transition-colors text-left cursor-pointer font-bold leading-relaxed"
                 >
                   Advertise With Us
                 </button>
               ) : (
-                <a href="#about" onClick={() => handleNav('about')} className="hover:text-[#DA251D] hover:underline transition-colors leading-relaxed">
-                  Working Committee
+                <a href="#contact" onClick={() => handleNav('contact')} className="hover:text-[#DB1E36] hover:underline transition-colors leading-relaxed">
+                  Contact Us
                 </a>
               )}
-              <a href="#events" onClick={() => handleNav('events')} className="hover:text-[#DA251D] hover:underline transition-colors leading-relaxed">
-                Events
-              </a>
-              <a href="#contact" onClick={() => handleNav('contact')} className="hover:text-[#DA251D] hover:underline transition-colors leading-relaxed">
-                Contact
-              </a>
             </div>
           </div>
 
           {/* Col 3: Contact Us (3 cols) */}
           <div className="lg:col-span-3">
-            <h6 className="text-[12.5px] font-extrabold text-[#18181B] uppercase tracking-wider mb-3 whitespace-nowrap">
-              HEAD OFFICE
+            <h6 className="text-[12.5px] font-extrabold text-[#273485] uppercase tracking-wider mb-3 whitespace-nowrap">
+              REGISTERED HEAD OFFICE
             </h6>
             <ul className="space-y-2.5 text-[12.5px] font-bold text-slate-700 list-none p-0 m-0">
               <li className="flex items-start gap-2">
-                <MapPin size={15} className="text-[#DA251D] shrink-0 mt-0.5" strokeWidth={2.4} />
-                <span className="leading-snug">The Stock Exchange Towers, 1st Basement, Dalal Street, Fort, Mumbai – 400 001</span>
+                <MapPin size={15} className="text-[#DB1E36] shrink-0 mt-0.5" strokeWidth={2.4} />
+                <span className="leading-snug">Office No. 403, 4th Floor, Ajmera Midtown, Kalbadevi Road, Mumbai – 400 002, Maharashtra, India</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail size={15} className="text-[#DA251D] shrink-0" strokeWidth={2.4} />
-                <a href="mailto:ecamindia@gmail.com" className="hover:text-[#DA251D] hover:underline transition-colors text-slate-800 font-bold">
-                  ecamindia@gmail.com
+                <Mail size={15} className="text-[#273485] shrink-0" strokeWidth={2.4} />
+                <a href="mailto:office@emamumbai.com" className="hover:text-[#DB1E36] hover:underline transition-colors text-slate-800 font-bold">
+                  office@emamumbai.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail size={15} className="text-[#273485] shrink-0" strokeWidth={2.4} />
+                <a href="mailto:emamub@gmail.com" className="hover:text-[#DB1E36] hover:underline transition-colors text-slate-800 font-bold">
+                  emamub@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2 whitespace-nowrap">
-                <Phone size={15} className="text-[#DA251D] shrink-0" strokeWidth={2.4} />
-                <a href="tel:+918452828430" className="hover:text-[#DA251D] hover:underline transition-colors text-slate-900 font-extrabold">
-                  +91 84528 28430 / 022 2272 3668
+                <Phone size={15} className="text-[#273485] shrink-0" strokeWidth={2.4} />
+                <a href="tel:+912222060625" className="hover:text-[#DB1E36] hover:underline transition-colors text-slate-900 font-extrabold">
+                  022-2206 0625 / 022-2208 8141
+                </a>
+              </li>
+              <li className="flex items-center gap-2 whitespace-nowrap">
+                <Phone size={15} className="text-[#DB1E36] shrink-0" strokeWidth={2.4} />
+                <a href="tel:+917700065111" className="hover:text-[#DB1E36] hover:underline transition-colors text-slate-900 font-extrabold">
+                  +91 77000 65111 (Helpline)
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Col 4: Follow Us (3 cols, Single Line Social Icons) */}
+          {/* Col 4: Follow Us & Mobile App (3 cols) */}
           <div className="lg:col-span-3">
-            <h6 className="text-[12.5px] font-extrabold text-[#18181B] uppercase tracking-wider mb-3 whitespace-nowrap">
-              CONNECT WITH ECAM
+            <h6 className="text-[12.5px] font-extrabold text-[#273485] uppercase tracking-wider mb-2 whitespace-nowrap">
+              CONNECT &amp; MOBILE APP
             </h6>
             <p className="text-xs font-semibold text-slate-700 mb-2.5 leading-relaxed">
-              Regional Chapters: Pune • Nashik • Ahilyanagar • Jalgaon • W. Maharashtra • Dhule • Thane • Kokan
+              Download the official EMA Mumbai app for digital directory access, real-time circulars, and trade updates.
             </p>
+            <div className="flex items-center gap-2.5 mb-3">
+              <a
+                href="https://play.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-transform hover:scale-105"
+                title="Download EMA Mumbai on Google Play"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/google-play-badge.png"
+                  alt="Get EMA on Google Play"
+                  className="h-8 w-auto object-contain"
+                />
+              </a>
+              <a
+                href="https://apple.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-transform hover:scale-105"
+                title="Download EMA Mumbai on Apple App Store"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/apple-store-badge.png"
+                  alt="Download EMA on the App Store"
+                  className="h-8 w-auto object-contain"
+                />
+              </a>
+            </div>
             <div className="flex items-center gap-1.5 sm:gap-2 text-slate-700 flex-nowrap">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-[#DA251D] hover:text-white flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-2xs hover:scale-105"
+                className="w-8 h-8 rounded-full bg-[#EEF2FF] text-[#273485] hover:bg-[#273485] hover:text-white flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-2xs hover:scale-105"
                 title="Facebook"
               >
                 <FacebookIcon />
@@ -158,7 +200,7 @@ export default function Footer({ onNavigateSection, onOpenAdvertise }) {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-[#DA251D] hover:text-white flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-2xs hover:scale-105"
+                className="w-8 h-8 rounded-full bg-[#EEF2FF] text-[#273485] hover:bg-[#273485] hover:text-white flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-2xs hover:scale-105"
                 title="Instagram"
               >
                 <InstagramIcon />
@@ -167,7 +209,7 @@ export default function Footer({ onNavigateSection, onOpenAdvertise }) {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-[#DA251D] hover:text-white flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-2xs hover:scale-105"
+                className="w-8 h-8 rounded-full bg-[#EEF2FF] text-[#273485] hover:bg-[#273485] hover:text-white flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-2xs hover:scale-105"
                 title="LinkedIn"
               >
                 <LinkedInIcon />
@@ -176,7 +218,7 @@ export default function Footer({ onNavigateSection, onOpenAdvertise }) {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-[#DA251D] hover:text-white flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-2xs hover:scale-105"
+                className="w-8 h-8 rounded-full bg-[#EEF2FF] text-[#273485] hover:bg-[#273485] hover:text-white flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-2xs hover:scale-105"
                 title="Twitter / X"
               >
                 <TwitterIcon />
@@ -185,7 +227,7 @@ export default function Footer({ onNavigateSection, onOpenAdvertise }) {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-[#DA251D] hover:text-white flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-2xs hover:scale-105"
+                className="w-8 h-8 rounded-full bg-[#EEF2FF] text-[#273485] hover:bg-[#273485] hover:text-white flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-2xs hover:scale-105"
                 title="YouTube"
               >
                 <YoutubeIcon />
@@ -196,7 +238,7 @@ export default function Footer({ onNavigateSection, onOpenAdvertise }) {
 
         {/* Bottom Copyright */}
         <div className="border-t border-slate-200/90 pt-6 text-center text-xs font-bold text-slate-600">
-          © {new Date().getFullYear()} Electrical Contractors&apos; Association of Maharashtra (ECAM). Estd. 1925. All Rights Reserved.
+          © {new Date().getFullYear()} The Electric Merchants&apos; Association (EMA). Estd. 1937. All Rights Reserved.
         </div>
       </div>
     </footer>

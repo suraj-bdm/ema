@@ -10,11 +10,9 @@ export default function DirectorySearchBar({ onSelectSearchItem, isHeaderMode = 
   const dropdownRef = useRef(null);
 
   const roles = [
+    'Product/ Category',
+    'Brand',
     'All Categories',
-    'Electrical Contractors',
-    'Brands',
-    'Suppliers',
-    'Manufacturers',
   ];
 
   // Close dropdown on click outside or escape key
@@ -55,7 +53,7 @@ export default function DirectorySearchBar({ onSelectSearchItem, isHeaderMode = 
       <div className={isHeaderMode ? 'w-full relative z-30' : 'max-w-xl mx-auto relative z-30'}>
         <form
           onSubmit={handleSearchSubmit}
-          className="bg-white rounded-full border border-slate-300 shadow-[0_2px_12px_-2px_rgba(218,37,29,0.08)] flex items-stretch p-0.5 sm:p-1 transition-all hover:border-[#DA251D]/40 focus-within:border-[#DA251D] focus-within:ring-2 focus-within:ring-[#DA251D]/10"
+          className="bg-white rounded-full border border-slate-300 shadow-[0_2px_12px_-2px_rgba(39,52,133,0.08)] flex items-stretch p-0.5 sm:p-1 transition-all hover:border-[#273485]/50 focus-within:border-[#273485] focus-within:ring-2 focus-within:ring-[#273485]/15"
         >
           {/* Left: Role Dropdown */}
           <div className="relative shrink-0" ref={dropdownRef}>
@@ -68,7 +66,7 @@ export default function DirectorySearchBar({ onSelectSearchItem, isHeaderMode = 
               <ChevronDown
                 size={12}
                 className={`text-slate-500 shrink-0 transition-transform duration-200 ${
-                  roleDropdownOpen ? 'rotate-180 text-[#DA251D]' : ''
+                  roleDropdownOpen ? 'rotate-180 text-[#273485]' : ''
                 }`}
               />
             </button>
@@ -84,12 +82,12 @@ export default function DirectorySearchBar({ onSelectSearchItem, isHeaderMode = 
                       setSelectedRole(role);
                       setRoleDropdownOpen(false);
                     }}
-                    className={`w-full px-3.5 py-2 text-left text-xs font-semibold flex items-center justify-between hover:bg-red-50/50 transition-colors cursor-pointer ${
-                      selectedRole === role ? 'text-[#DA251D] font-bold bg-red-50/70' : 'text-slate-700'
+                    className={`w-full px-3.5 py-2 text-left text-xs font-semibold flex items-center justify-between hover:bg-[#EEF2FF] transition-colors cursor-pointer ${
+                      selectedRole === role ? 'text-[#273485] font-bold bg-[#EEF2FF]' : 'text-slate-700'
                     }`}
                   >
                     <span>{role}</span>
-                    {selectedRole === role && <Check size={14} className="text-[#DA251D]" strokeWidth={2.4} />}
+                    {selectedRole === role && <Check size={14} className="text-[#273485]" strokeWidth={2.4} />}
                   </button>
                 ))}
               </div>
@@ -105,7 +103,7 @@ export default function DirectorySearchBar({ onSelectSearchItem, isHeaderMode = 
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search Electrical Contractors | Electrical Products"
+              placeholder="Search by Brands or Products"
               className="w-full bg-transparent text-xs sm:text-[13px] xl:text-[13.5px] text-slate-800 placeholder-slate-400 focus:outline-none"
             />
             {searchQuery && (
@@ -120,10 +118,10 @@ export default function DirectorySearchBar({ onSelectSearchItem, isHeaderMode = 
             )}
           </div>
 
-          {/* Right: ECAM Red Rounded Search Button */}
+          {/* Right: Signature EMA Royal Navy Blue Rounded Search Button */}
           <button
             type="submit"
-            className="rounded-full bg-[#DA251D] hover:bg-[#B71C1C] active:bg-[#991B1B] text-white px-3 sm:px-4 py-1.5 sm:py-2 flex items-center justify-center gap-1.5 shadow-xs transition-all hover:scale-102 cursor-pointer shrink-0 font-semibold text-xs"
+            className="rounded-full bg-gradient-to-r from-[#273485] to-[#1E2970] hover:from-[#1E2970] hover:to-[#16205B] active:scale-98 text-white px-3.5 sm:px-4.5 py-1.5 sm:py-2 flex items-center justify-center gap-1.5 shadow-xs transition-all hover:scale-102 cursor-pointer shrink-0 font-semibold text-xs border border-white/20"
             aria-label="Search directory"
           >
             <Search size={13} strokeWidth={2.4} />

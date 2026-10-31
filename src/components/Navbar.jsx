@@ -10,6 +10,7 @@ import {
   Search,
   MousePointerClick,
   ChevronDown,
+  Home,
 } from 'lucide-react';
 import DirectorySearchBar from '@/components/DirectorySearchBar';
 
@@ -24,103 +25,62 @@ export default function Navbar({
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const handleFocusSearch = () => {
-    const searchInput = document.querySelector('input[placeholder*="Electrical Contractors"]');
+    const searchInput = document.querySelector('input[placeholder*="Search by Brands"]');
     if (searchInput) {
       searchInput.focus();
       searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   };
 
-  // Exact Menu items matching spreadsheet structure
+  // 100% Exact Navbar Menu Items from https://emamumbai.com/
   const navMenuItems = [
-    { label: 'HOME', href: '#top' },
     {
-      label: 'ABOUT ECAM',
+      label: 'Home',
+      isHomeIcon: true,
+      href: '#top',
+    },
+    {
+      label: 'About EMA',
       hasDropdown: true,
-      items: [
-        { label: "PRESIDENT DESK'S", href: '#about' },
-        { label: 'HISTORY OF ECAM', href: '#about' },
-        { label: 'POLICIES', href: '#about' },
-        { label: 'VISION AND MISSION', href: '#about' },
-        { label: 'PAST PRESIDENTS', href: '#about' },
-      ],
-    },
-    {
-      label: 'REGIONS',
-      hasDropdown: true,
-      items: [
-        { label: 'Pune', href: '#contact' },
-        { label: 'Pimpri Chinchwad', href: '#contact' },
-        { label: 'Nashik', href: '#contact' },
-        { label: 'Ahilyanagar', href: '#contact' },
-        { label: 'Jalgaon', href: '#contact' },
-        { label: 'Western Maharashtra', href: '#contact' },
-        { label: 'Dhule Nandurbar', href: '#contact' },
-        { label: 'Thane', href: '#contact' },
-        { label: 'Konkan', href: '#contact' },
-      ],
-    },
-    {
-      label: 'COMMITTEES',
-      hasDropdown: true,
-      items: [
-        { label: "PRESIDENT'S MESSAGE", href: '#about' },
-        { label: "CHAIRMAN'S MESSAGE", href: '#about' },
-        { label: 'MANAGING COMM', href: '#about' },
-        { label: 'OTHER COMM', href: '#about' },
-      ],
-    },
-    {
-      label: 'MEMBERSHIP',
-      hasDropdown: true,
-      items: [
-        { label: 'MEMBER DIRECTORY', action: handleFocusSearch },
-        { label: 'BECOME A MEMBER', action: onOpenJoin },
-        { label: 'MEMBERSHIP BENEFITS', href: '#membership' },
-      ],
-    },
-    {
-      label: 'GR',
-      href: '#news',
-    },
-    {
-      label: 'MAGAZINES',
-      href: '#news',
-    },
-    {
-      label: 'EVENTS',
-      hasDropdown: true,
-      items: [
-        { label: 'PAST EVENTS', href: '#events' },
-        { label: 'UPCOMING EVENTS', href: '#events' },
-        { label: 'GALLERY', href: '#events' },
-      ],
-    },
-    {
-      label: 'NEWS & MEDIA',
-      hasDropdown: true,
-      items: [
-        { label: 'PRESS RELEASE', href: '#news' },
-        { label: 'PHOTO GALLERY', href: '#events' },
-        { label: 'VIDEO GALLERY', href: '#events' },
-      ],
-    },
-    {
-      label: 'CSR/DSR',
       href: '#about',
-    },
-    {
-      label: 'MORE LINKS',
-      hasDropdown: true,
       items: [
-        { label: 'DOWNLOAD FORM', action: onOpenJoin, href: '#membership' },
-        { label: 'TENDER', href: '#news' },
+        { label: "President's Desk", href: '#about' },
+        { label: 'About us', href: '#about' },
+        { label: 'Key Initiatives', href: '#about' },
+        { label: 'Policy, Vision & Objective', href: '#about' },
+        { label: 'History of EMA', href: '#about' },
+        { label: 'Past President', href: '#about' },
+        { label: 'Facility To Members', href: '#membership' },
       ],
     },
     {
-      label: 'CONTACT US',
-      href: '#contact',
+      label: 'Committees',
+      hasDropdown: true,
+      href: '#about',
+      items: [
+        { label: 'Managing Committee', href: '#about' },
+        { label: 'Website Committee', href: '#about' },
+        { label: 'Activity Committee', href: '#events' },
+      ],
     },
+    {
+      label: 'Members',
+      hasDropdown: true,
+      href: '#membership',
+      items: [
+        { label: 'Member Login', action: onOpenLogin },
+        { label: 'Member Search', action: handleFocusSearch },
+        { label: 'Become a Member', action: onOpenJoin },
+      ],
+    },
+    { label: 'Upcomming Events', href: '#events' },
+    { label: 'Gallery', href: '#events' },
+    { label: 'Journal', href: '#news' },
+    { label: 'Holidays', href: '#news' },
+    { label: 'Useful Links', href: '#resources' },
+    { label: 'Transport', href: '#resources' },
+    { label: 'News', href: '#news' },
+    { label: 'Contact Us', href: '#contact' },
   ];
 
   const handleLinkClick = (link) => {
@@ -138,82 +98,48 @@ export default function Navbar({
 
   return (
     <header className="bg-white border-b border-slate-200/90 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.03)] z-50 relative">
-      {/* 1. Executive Top Utility Strip - ECAM Theme */}
-      <div className="bg-[#DA251D] text-white border-b border-[#B71C1C] shadow-xs">
-        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 h-[28px] sm:h-[30px] lg:h-[30px] xl:h-[32px] flex items-center justify-between text-[11px] sm:text-xs">
-          {/* Left: Contact Info */}
-          <div className="flex items-center gap-2 sm:gap-4 text-white min-w-0">
+      {/* 1. Executive Top Utility Strip - Exact match to emamumbai.com */}
+      <div className="bg-[#DB1E36] text-white shadow-xs">
+        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 h-[34px] sm:h-[36px] lg:h-[38px] flex items-center justify-between text-xs sm:text-sm lg:text-[14.5px]">
+          {/* Left: Exact Contact Info with Increased Font Size */}
+          <div className="flex items-center gap-3.5 sm:gap-5 text-white">
             {/* Phone */}
             <a
-              href="tel:+918452828430"
-              className="flex items-center gap-1.5 sm:gap-2 px-1.5 sm:px-2.5 py-0.5 rounded-full hover:bg-white/15 transition-all text-white font-bold tracking-wide shrink-0 text-[10.5px] sm:text-xs"
-              title="Call ECAM Secretariat"
+              href="tel:02222060625"
+              className="flex items-center gap-2 hover:underline text-white font-bold"
+              title="Call EMA: 022-2206 0625"
             >
-              <Phone size={11} className="text-white shrink-0 fill-white" strokeWidth={2.4} />
-              <span className="hidden sm:inline">+91 84528 28430 / 022 2272 3668</span>
-              <span className="sm:hidden">+91 84528 28430</span>
+              <Phone size={15} className="text-white shrink-0 fill-white" />
+              <span>022-2206 0625</span>
             </a>
-
-            <span className="text-white/40 hidden md:inline">•</span>
 
             {/* Email */}
             <a
-              href="mailto:ecamindia@gmail.com"
-              className="hidden md:flex items-center gap-2 px-2.5 py-0.5 rounded-full hover:bg-white/15 transition-all text-white font-medium"
-              title="Official ECAM Email"
+              href="mailto:office@emamumbai.com"
+              className="flex items-center gap-2 hover:underline text-white font-semibold"
+              title="Email: office@emamumbai.com"
             >
-              <Mail size={11} className="text-white" strokeWidth={2.2} />
-              <span>ecamindia@gmail.com</span>
+              <Mail size={15} className="text-white shrink-0" />
+              <span>office@emamumbai.com</span>
             </a>
           </div>
 
-          {/* Right: Quick Action Links & Member Portal */}
-          <div className="flex items-center gap-1.5 sm:gap-2 text-white shrink-0">
-            {/* 1. Member Login */}
+          {/* Right: Exact Links with Increased Font Size */}
+          <div className="flex items-center gap-3.5 sm:gap-6 text-white font-bold text-xs sm:text-sm lg:text-[14px]">
             <button
               type="button"
               onClick={onOpenLogin}
-              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold border border-white/30 shadow-xs hover:border-white transition-all cursor-pointer text-[10.5px] sm:text-xs whitespace-nowrap"
-              title="Access ECAM Member Portal"
+              className="hover:underline text-white transition-colors cursor-pointer"
             >
-              <User size={11} className="text-white shrink-0" strokeWidth={2.4} />
-              <span>MEMBER LOGIN</span>
+              Member&apos;s Login
             </button>
-
-            {/* 2. Member Directory */}
             <button
               type="button"
               onClick={handleFocusSearch}
-              className="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 sm:py-1 rounded-full text-white font-semibold hover:bg-white/15 transition-all cursor-pointer text-[11px] sm:text-xs"
-              title="Search ECAM Member Directory"
+              className="hover:underline text-white transition-colors cursor-pointer"
             >
-              <Search size={11} className="text-white" strokeWidth={2.2} />
-              <span>MEMBER DIRECTORY</span>
+              Member Search
             </button>
-
-            {/* 3. Join ECAM */}
-            {onOpenJoin && (
-              <button
-                type="button"
-                onClick={onOpenJoin}
-                className="flex items-center gap-1 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-white hover:bg-white/15 font-bold transition-all cursor-pointer text-[10.5px] sm:text-xs"
-                title="Apply for ECAM Membership"
-              >
-                <span>JOIN ECAM</span>
-              </button>
-            )}
-
-            {/* 4. Advertise With Us */}
-            {onOpenAdvertise && (
-              <button
-                type="button"
-                onClick={onOpenAdvertise}
-                className="hidden lg:flex items-center gap-1 px-2.5 py-0.5 sm:py-1 rounded-full text-white hover:bg-white/15 transition-all font-bold text-[11px] sm:text-xs cursor-pointer tracking-wide"
-                title="Advertise with ECAM"
-              >
-                <span>ADVERTISE WITH US</span>
-              </button>
-            )}
           </div>
         </div>
       </div>
@@ -221,7 +147,7 @@ export default function Navbar({
       {/* 2. Main Top Header: Logo on Left, Search Bar on Right */}
       <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-2 sm:py-2.5 lg:py-3 relative z-50">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-6 lg:gap-8">
-          {/* Left Side: Prominent Larger ECAM Logo & Organization Title */}
+          {/* Left Side: Official The Electric Merchants' Association Logo */}
           <div className="flex items-center justify-between shrink-0">
             <a
               href="#top"
@@ -233,9 +159,9 @@ export default function Navbar({
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/ecam-logo.png"
-                alt="ECAM Logo - Electrical Contractors' Association of Maharashtra"
-                className="h-14 sm:h-16 md:h-[78px] lg:h-[90px] xl:h-[98px] w-auto max-w-[340px] sm:max-w-[460px] md:max-w-[580px] lg:max-w-[680px] object-contain transition-transform group-hover:scale-[1.01]"
+                src="/images/ema-logo.png"
+                alt="The Electric Merchant's Association (EMA Mumbai) — Estd. 1937"
+                className="h-12 sm:h-14 md:h-[68px] lg:h-[76px] xl:h-[82px] w-auto max-w-[340px] sm:max-w-[460px] md:max-w-[560px] lg:max-w-[620px] object-contain transition-transform group-hover:scale-[1.01]"
               />
             </a>
 
@@ -244,7 +170,7 @@ export default function Navbar({
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-1.5 sm:p-2 rounded-lg text-slate-700 hover:bg-slate-100 cursor-pointer border border-slate-200"
+                className="p-1.5 sm:p-2 rounded-lg text-[#273485] hover:bg-[#EEF2FF] cursor-pointer border border-slate-200"
                 aria-label="Toggle navigation"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -259,15 +185,36 @@ export default function Navbar({
         </div>
       </div>
 
-      {/* 3. Original Clean Primary Navigation Bar - Visible on desktop, hidden on mobile */}
-      <div className="hidden lg:block border-t border-b border-slate-200/90 bg-[#FAFBFD] sticky top-0 z-40 shadow-xs">
+      {/* 3. EMA Signature Royal Navy Navigation Bar with Red Top Border */}
+      <div className="hidden lg:block border-t-3 border-[#DB1E36] bg-[#273485] sticky top-0 z-40 shadow-md">
         <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-          <div className="flex items-center justify-between h-[36px] sm:h-[38px] lg:h-[40px] xl:h-[42px] overflow-visible">
+          <div className="flex items-center justify-between h-[38px] sm:h-[40px] lg:h-[42px] overflow-visible">
             {/* Navigation Links distributed across the full width with generous spacing between items */}
-            <nav className="w-full flex items-center justify-between gap-1.5 lg:gap-2.5 xl:gap-4 2xl:gap-6 overflow-visible" aria-label="Main Navigation">
+            <nav className="w-full flex items-center justify-between gap-1 lg:gap-2 xl:gap-3 2xl:gap-5 overflow-visible" aria-label="Main Navigation">
               {navMenuItems.map((item) => {
                 const isActive = activeTab === item.label;
                 const isDropdownOpen = openDropdown === item.label;
+
+                if (item.isHomeIcon) {
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleLinkClick(item);
+                      }}
+                      className={`text-[14px] font-bold py-1.5 px-3 rounded-md flex items-center justify-center transition-all shrink-0 ${
+                        isActive
+                          ? 'bg-[#DB1E36] text-white shadow-xs'
+                          : 'text-white/90 hover:text-white hover:bg-white/10'
+                      }`}
+                      title="Home"
+                    >
+                      <Home size={17} className="text-white" />
+                    </a>
+                  );
+                }
 
                 if (item.hasDropdown) {
                   return (
@@ -280,28 +227,28 @@ export default function Navbar({
                       <button
                         type="button"
                         onClick={() => setOpenDropdown(isDropdownOpen ? null : item.label)}
-                        className={`text-[11.5px] xl:text-[12.5px] 2xl:text-[13px] font-bold tracking-wide transition-colors py-1.5 px-1 sm:px-1.5 flex items-center gap-1 cursor-pointer whitespace-nowrap ${
+                        className={`text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-bold tracking-wide transition-all py-1.5 px-2.5 rounded-md flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
                           isActive
-                            ? 'text-[#DA251D] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#DA251D] after:rounded-full'
+                            ? 'bg-[#DB1E36] text-white shadow-xs'
                             : isDropdownOpen
-                            ? 'text-[#DA251D]'
-                            : 'text-slate-700 hover:text-[#DA251D]'
+                            ? 'bg-[#1E2970] text-white'
+                            : 'text-white/90 hover:text-white hover:bg-white/10'
                         }`}
                       >
                         <span>{item.label}</span>
-                        <ChevronDown size={12} className={`transition-transform duration-200 shrink-0 ${isDropdownOpen ? 'rotate-180 text-[#DA251D]' : 'text-slate-400'}`} />
+                        <ChevronDown size={13} className={`transition-transform duration-200 shrink-0 ${isDropdownOpen ? 'rotate-180 text-white' : 'text-white/70'}`} />
                       </button>
 
                       {/* Dropdown Menu Popup with invisible hover bridge to eliminate jitter */}
                       {isDropdownOpen && (
-                        <div className={`absolute top-full ${item.label === 'MORE LINKS' ? 'right-0' : 'left-0'} pt-0.5 z-50 min-w-[220px] animate-fade-in`}>
-                          <div className="bg-white text-slate-800 rounded-b-xl shadow-xl border border-slate-200/90 py-1.5 overflow-hidden">
+                        <div className={`absolute top-full ${item.label === 'MORE LINKS' ? 'right-0' : 'left-0'} pt-0.5 z-50 min-w-[230px] animate-fade-in`}>
+                          <div className="bg-white text-slate-800 rounded-b-xl shadow-2xl border-t-2 border-[#DB1E36] border-x border-b border-slate-200/90 py-1.5 overflow-hidden">
                             {item.items.map((sub) => (
                               <button
                                 key={sub.label}
                                 type="button"
                                 onClick={() => handleLinkClick(sub)}
-                                className="w-full text-left px-4 py-2 text-xs font-semibold hover:bg-red-50 hover:text-[#DA251D] transition-colors cursor-pointer flex items-center justify-between block"
+                                className="w-full text-left px-4 py-2 text-[13px] font-semibold hover:bg-[#EEF2FF] hover:text-[#273485] transition-colors cursor-pointer flex items-center justify-between block"
                               >
                                 <span>{sub.label}</span>
                               </button>
@@ -321,10 +268,10 @@ export default function Navbar({
                       e.preventDefault();
                       handleLinkClick(item);
                     }}
-                    className={`text-[11.5px] xl:text-[12.5px] 2xl:text-[13px] font-bold tracking-wide transition-colors py-2 px-1 sm:px-1.5 whitespace-nowrap shrink-0 relative ${
+                    className={`text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-bold tracking-wide transition-all py-1.5 px-2.5 rounded-md whitespace-nowrap shrink-0 relative ${
                       isActive
-                        ? 'text-[#DA251D] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#DA251D] after:rounded-full'
-                        : 'text-slate-700 hover:text-[#DA251D]'
+                        ? 'bg-[#DB1E36] text-white shadow-xs'
+                        : 'text-white/90 hover:text-white hover:bg-white/10'
                     }`}
                   >
                     {item.label}
@@ -346,10 +293,10 @@ export default function Navbar({
                   <button
                     type="button"
                     onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm font-semibold text-slate-800 rounded-lg hover:bg-slate-50"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm font-semibold text-slate-800 rounded-lg hover:bg-[#EEF2FF]"
                   >
                     <span>{item.label}</span>
-                    <ChevronDown size={14} className={openDropdown === item.label ? 'rotate-180 text-[#DA251D]' : ''} />
+                    <ChevronDown size={14} className={openDropdown === item.label ? 'rotate-180 text-[#DB1E36]' : ''} />
                   </button>
                   {openDropdown === item.label && (
                     <div className="pl-4 py-1 space-y-1 bg-slate-50 rounded-lg">
@@ -358,7 +305,7 @@ export default function Navbar({
                           key={sub.label}
                           type="button"
                           onClick={() => handleLinkClick(sub)}
-                          className="w-full text-left px-3 py-2 text-xs font-medium text-slate-600 hover:text-[#DA251D]"
+                          className="w-full text-left px-3 py-2 text-xs font-medium text-slate-600 hover:text-[#273485] hover:bg-[#EEF2FF] rounded"
                         >
                           {sub.label}
                         </button>
@@ -374,10 +321,17 @@ export default function Navbar({
                     handleLinkClick(item);
                   }}
                   className={`block px-3 py-2 text-sm font-semibold rounded-lg ${
-                    activeTab === item.label ? 'bg-red-50 text-[#DA251D]' : 'text-slate-700 hover:bg-slate-50'
+                    activeTab === item.label ? 'bg-[#EEF2FF] text-[#273485] font-bold border-l-4 border-[#DB1E36]' : 'text-slate-700 hover:bg-slate-50'
                   }`}
                 >
-                  {item.label}
+                  {item.isHomeIcon ? (
+                    <span className="flex items-center gap-2">
+                      <Home size={15} />
+                      <span>Home</span>
+                    </span>
+                  ) : (
+                    item.label
+                  )}
                 </a>
               )}
             </div>
@@ -392,7 +346,7 @@ export default function Navbar({
                   setMobileMenuOpen(false);
                   onOpenLogin();
                 }}
-                className="py-2 px-3 rounded-lg bg-[#DA251D] text-white text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
+                className="py-2 px-3 rounded-lg bg-[#273485] hover:bg-[#1E2970] text-white text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
               >
                 <User size={13} /> MEMBER LOGIN
               </button>
@@ -417,9 +371,9 @@ export default function Navbar({
                     setMobileMenuOpen(false);
                     onOpenJoin();
                   }}
-                  className="py-2 px-3 rounded-lg bg-[#B71C1C] text-white text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
+                  className="py-2 px-3 rounded-lg bg-[#DB1E36] hover:bg-[#990000] text-white text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
                 >
-                  JOIN ECAM
+                  JOIN EMA
                 </button>
               )}
 

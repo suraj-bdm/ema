@@ -52,18 +52,18 @@ export default function AdvertiseModal({ isOpen, onClose }) {
       desc: 'Dynamic sliding partner cards with continuous infinite scroll.',
     },
     {
-      title: 'IECT Magazine Feature',
-      size: 'Print & Digital Gazette',
+      title: 'EMA Trade Circular Feature',
+      size: 'Print & Digital Bulletin',
       dims: 'Full Page / Half Page',
-      placement: 'Indian Electrical Contractor & Trader',
-      desc: 'Monthly circular distributed to 3,000+ licensed contractors.',
+      placement: 'EMA Trade Circular & Journal',
+      desc: 'Monthly circular distributed to thousands of trade merchants & manufacturers.',
     },
     {
-      title: 'ECAMEX 2026 Sponsorship',
+      title: 'Granite Jubilee 2026 Sponsorship',
       size: 'Exhibition Stall & Pavilion',
       dims: 'Custom Space',
-      placement: 'ECAMEX 2026 Mega Expo, Mumbai',
-      desc: 'Title, Platinum, Gold & Silver expo partnership opportunities.',
+      placement: 'EMA 90th Milestone Year Expo, Mumbai',
+      desc: 'Title, Platinum, Gold & Silver event partnership opportunities.',
     },
   ];
 
@@ -77,17 +77,17 @@ export default function AdvertiseModal({ isOpen, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="bg-gradient-to-r from-[#B71C1C] via-[#DA251D] to-[#991B1B] text-white px-6 py-5 flex items-center justify-between">
+        <div className="bg-gradient-to-r from-[#273485] via-[#1E2970] to-[#DB1E36] text-white px-6 py-5 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-amber-300 border border-white/15">
               <Megaphone size={20} strokeWidth={2.2} />
             </span>
             <div>
               <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                Advertise With ECAM
+                Advertise With EMA
               </h3>
-              <p className="text-xs text-rose-100">
-                Electrical Contractors&apos; Association of Maharashtra • Media, IECT &amp; ECAMEX 2026
+              <p className="text-xs text-slate-200">
+                The Electric Merchants&apos; Association (Estd. 1937) • Media, Circulars &amp; Granite Jubilee 2026
               </p>
             </div>
           </div>
@@ -114,14 +114,14 @@ export default function AdvertiseModal({ isOpen, onClose }) {
               <p className="text-sm text-slate-600 mb-2 leading-relaxed max-w-md mx-auto">
                 Thank you, <strong className="text-black font-semibold">{formData.contactPerson || 'Partner'}</strong>. Your sponsorship inquiry for{' '}
                 <strong className="text-black font-semibold">{formData.companyName || 'your organization'}</strong> regarding{' '}
-                <span className="text-[#DA251D] font-semibold">{formData.adFormat}</span> has been received.
+                <span className="text-[#273485] font-semibold">{formData.adFormat}</span> has been received.
               </p>
               <p className="text-xs text-slate-500 mb-6 max-w-md mx-auto">
-                The ECAM Sponsorship &amp; Media Secretariat will review your request and share the official media kit, tariff card, and onboarding guide within 24 business hours.
+                The EMA Sponsorship &amp; Media Secretariat will review your request and share the official media kit, tariff card, and onboarding guide within 24 business hours.
               </p>
               <button
                 type="button"
-                className="px-8 py-2.5 rounded-full bg-[#DA251D] hover:bg-[#B71C1C] text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow-md transition-all cursor-pointer"
+                className="px-8 py-2.5 rounded-full bg-[#273485] hover:bg-[#1E2970] text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow-md transition-all cursor-pointer"
                 onClick={() => {
                   setSubmitted(false);
                   onClose();
@@ -135,26 +135,26 @@ export default function AdvertiseModal({ isOpen, onClose }) {
               {/* Introduction */}
               <div className="mb-6 pb-5 border-b border-slate-100">
                 <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-[11px] font-bold text-[#DA251D] tracking-wider uppercase">
+                  <span className="text-[11px] font-bold text-[#273485] tracking-wider uppercase">
                     OFFICIAL SPONSORSHIP NETWORK
                   </span>
                   <span className="w-1 h-1 rounded-full bg-slate-300" />
                   <span className="text-[11px] font-semibold text-amber-600">
-                    3,000+ Licensed Contractors &amp; Engineers Reach
+                    Apex Trade Fraternity Reach Across India
                   </span>
                 </div>
                 <h4 className="fluid-card-title font-bold text-[#18181B] mb-1">
-                  Amplify Your Brand to Maharashtra&apos;s Electrical &amp; Engineering Fraternity
+                  Amplify Your Brand to India&apos;s Premier Electrical Trade Network
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  ECAM provides strategic digital placements across the official ECAM portal, IECT (Indian Electrical Contractor &amp; Trader) Magazine, and premier ECAMEX 2026 expo spaces. Place your brand directly in front of accredited electrical contractors, wholesale stockists, panel builders, and corporate EPC buyers.
+                  EMA provides strategic digital placements across the official EMA portal, monthly trade circulars, and the upcoming 90th Milestone Year (Granite Jubilee) national events. Place your brand directly in front of accredited electrical merchants, stockists, manufacturers, and corporate buyers.
                 </p>
               </div>
 
               {/* Supported Ad Formats Cards */}
               <div className="mb-6">
                 <p className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
-                  <Layers size={13} className="text-[#DA251D]" />
+                  <Layers size={13} className="text-[#273485]" />
                   <span>Standard Ad &amp; Sponsorship Specifications</span>
                 </p>
 
@@ -162,15 +162,15 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                   {adFormats.map((fmt, i) => (
                     <div
                       key={i}
-                      className="p-3.5 rounded-xl border border-slate-200 bg-[#FAFBFD] hover:border-[#DA251D]/40 hover:bg-white transition-all shadow-2xs"
+                      className="p-3.5 rounded-xl border border-slate-200 bg-[#FAFBFD] hover:border-[#273485]/40 hover:bg-white transition-all shadow-2xs"
                     >
-                      <span className="text-[10px] font-bold text-[#DA251D] uppercase block tracking-wider mb-0.5">
+                      <span className="text-[10px] font-bold text-[#273485] uppercase block tracking-wider mb-0.5">
                         {fmt.size}
                       </span>
                       <h5 className="text-xs font-bold text-slate-900 mb-1">
                         {fmt.title}
                       </h5>
-                      <div className="bg-white px-2 py-1 rounded border border-slate-200 text-[11px] font-mono font-bold text-[#DA251D] mb-1.5">
+                      <div className="bg-white px-2 py-1 rounded border border-slate-200 text-[11px] font-mono font-bold text-[#DB1E36] mb-1.5">
                         {fmt.dims}
                       </div>
                       <p className="text-[11px] text-slate-500 leading-snug">
@@ -192,7 +192,7 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                       type="text"
                       required
                       placeholder="e.g. Polycab, Havells, Schneider Electric, etc."
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black placeholder-slate-400 focus:outline-none focus:border-[#DA251D] focus:ring-2 focus:ring-red-100 transition-all bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black placeholder-slate-400 focus:outline-none focus:border-[#273485] focus:ring-2 focus:ring-indigo-100 transition-all bg-white"
                       value={formData.companyName}
                       onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                     />
@@ -206,7 +206,7 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                       type="text"
                       required
                       placeholder="Full Name"
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black placeholder-slate-400 focus:outline-none focus:border-[#DA251D] focus:ring-2 focus:ring-red-100 transition-all bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black placeholder-slate-400 focus:outline-none focus:border-[#273485] focus:ring-2 focus:ring-indigo-100 transition-all bg-white"
                       value={formData.contactPerson}
                       onChange={(e) => setFormData({ ...formData, contactPerson: e.target.value })}
                     />
@@ -222,7 +222,7 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                       type="email"
                       required
                       placeholder="corporate@company.com"
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black placeholder-slate-400 focus:outline-none focus:border-[#DA251D] focus:ring-2 focus:ring-red-100 transition-all bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black placeholder-slate-400 focus:outline-none focus:border-[#273485] focus:ring-2 focus:ring-indigo-100 transition-all bg-white"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
@@ -236,7 +236,7 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                       type="tel"
                       required
                       placeholder="+91 98765 43210"
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black placeholder-slate-400 focus:outline-none focus:border-[#DA251D] focus:ring-2 focus:ring-red-100 transition-all bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black placeholder-slate-400 focus:outline-none focus:border-[#273485] focus:ring-2 focus:ring-indigo-100 transition-all bg-white"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
@@ -249,7 +249,7 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                       Desired Ad / Sponsorship Slot *
                     </label>
                     <select
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black focus:outline-none focus:border-[#DA251D] focus:ring-2 focus:ring-red-100 transition-all bg-white cursor-pointer"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black focus:outline-none focus:border-[#273485] focus:ring-2 focus:ring-indigo-100 transition-all bg-white cursor-pointer"
                       value={formData.adFormat}
                       onChange={(e) => setFormData({ ...formData, adFormat: e.target.value })}
                     >
@@ -257,8 +257,8 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                       <option value="Strategic Sponsor Card (242×235 px)">Strategic Sponsor Card (242×235 px)</option>
                       <option value="Hero Sidebar Banner (300×200 px)">Hero Sidebar Banner (300×200 px)</option>
                       <option value="Continuous Marquee Card (300×150 px)">Continuous Marquee Card (300×150 px)</option>
-                      <option value="IECT Magazine (Monthly Gazette Full Page)">IECT Magazine (Monthly Gazette Full Page)</option>
-                      <option value="ECAMEX 2026 Mega Expo Title / Platinum Sponsor">ECAMEX 2026 Mega Expo Title / Platinum Sponsor</option>
+                      <option value="EMA Monthly Trade Circular (Full Page)">EMA Monthly Trade Circular (Full Page)</option>
+                      <option value="90th Granite Jubilee Title / Platinum Sponsor">90th Granite Jubilee Title / Platinum Sponsor</option>
                       <option value="Custom Strategic Partnership Package">Custom Strategic Partnership Package</option>
                     </select>
                   </div>
@@ -268,7 +268,7 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                       Campaign Duration *
                     </label>
                     <select
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black focus:outline-none focus:border-[#DA251D] focus:ring-2 focus:ring-red-100 transition-all bg-white cursor-pointer"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black focus:outline-none focus:border-[#273485] focus:ring-2 focus:ring-indigo-100 transition-all bg-white cursor-pointer"
                       value={formData.duration}
                       onChange={(e) => setFormData({ ...formData, duration: e.target.value })}
                     >
@@ -276,7 +276,7 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                       <option value="3 Months (Quarterly)">3 Months (Quarterly - Popular)</option>
                       <option value="6 Months">6 Months</option>
                       <option value="12 Months (Annual)">12 Months (Annual Partnership)</option>
-                      <option value="ECAMEX 2026 Event Duration">ECAMEX 2026 Event Duration</option>
+                      <option value="Granite Jubilee Event Duration">Granite Jubilee Event Duration</option>
                     </select>
                   </div>
                 </div>
@@ -288,7 +288,7 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                   <textarea
                     rows={2}
                     placeholder="Provide details about your products, campaign, target audience, or stall requirements..."
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black placeholder-slate-400 focus:outline-none focus:border-[#DA251D] focus:ring-2 focus:ring-red-100 transition-all bg-white"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-xs sm:text-sm text-black placeholder-slate-400 focus:outline-none focus:border-[#273485] focus:ring-2 focus:ring-indigo-100 transition-all bg-white"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
@@ -297,13 +297,13 @@ export default function AdvertiseModal({ isOpen, onClose }) {
                 {/* Submit row */}
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-100">
                   <div className="flex items-center gap-2 text-xs text-slate-500">
-                    <ShieldCheck size={14} className="text-[#DA251D]" />
-                    <span>Official ECAM Media Secretariat Review</span>
+                    <ShieldCheck size={14} className="text-[#273485]" />
+                    <span>Official EMA Media Secretariat Review</span>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-[#DA251D] hover:bg-[#B71C1C] text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow-md transition-all cursor-pointer"
+                    className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-gradient-to-r from-[#273485] to-[#1E2970] hover:brightness-110 text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow-md transition-all cursor-pointer"
                   >
                     Submit Advertising Inquiry →
                   </button>
@@ -311,18 +311,18 @@ export default function AdvertiseModal({ isOpen, onClose }) {
               </form>
 
               {/* Direct Secretariat Contact Note */}
-              <div className="mt-5 p-3 rounded-xl bg-[#FEF2F2] border border-red-200/80 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-700">
-                <span className="font-semibold text-slate-900">
-                  ECAM Secretariat Media Helpline:
+              <div className="mt-5 p-3 rounded-xl bg-[#EEF2FF] border border-[#273485]/20 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-700">
+                <span className="font-semibold text-[#273485]">
+                  EMA Secretariat Media Helpline:
                 </span>
                 <div className="flex items-center gap-4">
-                  <a href="tel:+918452828430" className="flex items-center gap-1 text-[#DA251D] hover:underline font-bold">
+                  <a href="tel:+912222060625" className="flex items-center gap-1 text-[#273485] hover:text-[#DB1E36] hover:underline font-bold">
                     <Phone size={12} />
-                    <span>+91 84528 28430 / 022 2272 3668</span>
+                    <span>022-2206 0625 / +91 77000 65111</span>
                   </a>
-                  <a href="mailto:ecamindia@gmail.com" className="flex items-center gap-1 text-[#DA251D] hover:underline font-bold">
+                  <a href="mailto:office@emamumbai.com" className="flex items-center gap-1 text-[#273485] hover:text-[#DB1E36] hover:underline font-bold">
                     <Mail size={12} />
-                    <span>ecamindia@gmail.com</span>
+                    <span>office@emamumbai.com</span>
                   </a>
                 </div>
               </div>

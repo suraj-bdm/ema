@@ -21,10 +21,10 @@ export default function NewsletterSubscribe() {
   return (
     <section className="py-4 sm:py-5" id="newsletter">
       <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-        <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-r from-[#170B0B] via-[#220E0E] to-[#120707] border border-[#DA251D]/25 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.35)] p-4 sm:p-5 lg:px-7 lg:py-4.5 text-white">
+        <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-r from-[#0C1333] via-[#152054] to-[#0A102B] border border-[#273485]/40 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.35)] p-4 sm:p-5 lg:px-7 lg:py-4.5 text-white">
           
           {/* Subtle Ambient Red Glow on Right Corner */}
-          <div className="absolute right-0 top-0 bottom-0 w-80 bg-gradient-to-l from-[#DA251D]/15 to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-80 bg-gradient-to-l from-[#DB1E36]/20 to-transparent pointer-events-none" />
 
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-8">
             
@@ -33,7 +33,7 @@ export default function NewsletterSubscribe() {
               <h3 className="text-base sm:text-lg font-extrabold text-white tracking-tight flex items-center gap-2">
                 <span>Newsletter &amp; Official Circulars</span>
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-300 mt-0.5 leading-snug">
+              <p className="text-xs sm:text-[13px] text-slate-200 mt-0.5 leading-snug">
                 Subscribe to receive official notifications, regulatory updates, and technical publications.
               </p>
             </div>
@@ -59,7 +59,7 @@ export default function NewsletterSubscribe() {
                 </div>
               ) : (
                 <div>
-                  <form onSubmit={handleSubmit} className="relative flex items-center bg-black/45 border border-white/20 hover:border-white/30 focus-within:border-[#DA251D] focus-within:ring-2 focus-within:ring-[#DA251D]/20 rounded-full p-1 pl-3.5 shadow-inner transition-all">
+                  <form onSubmit={handleSubmit} className="relative flex items-center bg-black/45 border border-white/20 hover:border-white/30 focus-within:border-[#DB1E36] focus-within:ring-2 focus-within:ring-[#DB1E36]/20 rounded-full p-1 pl-3.5 shadow-inner transition-all">
                     <Mail size={15} className="text-slate-400 shrink-0" />
                     
                     <input
@@ -75,7 +75,7 @@ export default function NewsletterSubscribe() {
 
                     <button
                       type="submit"
-                      className="rounded-full px-4.5 sm:px-5 py-2 bg-gradient-to-r from-[#DA251D] via-[#B71C1C] to-[#991B1B] hover:brightness-110 active:scale-98 text-white font-bold text-xs sm:text-[12.5px] shadow-sm transition-all cursor-pointer whitespace-nowrap shrink-0 flex items-center gap-1.5 border border-white/15"
+                      className="rounded-full px-4.5 sm:px-5 py-2 bg-gradient-to-r from-[#DB1E36] via-[#C4161C] to-[#990000] hover:brightness-110 active:scale-98 text-white font-bold text-xs sm:text-[12.5px] shadow-sm transition-all cursor-pointer whitespace-nowrap shrink-0 flex items-center gap-1.5 border border-white/15"
                     >
                       <span>Subscribe</span>
                       <ArrowRight size={13} strokeWidth={2.5} />
