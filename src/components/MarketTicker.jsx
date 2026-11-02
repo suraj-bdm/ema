@@ -34,7 +34,7 @@ const EMA_LATEST_UPDATES = [
   {
     id: 'update-7',
     tag: 'DIRECTORY',
-    text: 'EMA Membership Directory Updation & Online Member Search active on emamumbai.com',
+    text: 'EMA Membership Directory Updation & Online Search active for 1,100+ Registered Members on emamumbai.com',
   },
   {
     id: 'update-8',

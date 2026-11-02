@@ -48,7 +48,7 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
   return (
     <section className="pt-0 pb-8 sm:pb-12" id="about">
       <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-        
+
         {/* 1. Official Sponsored Ribbon Banners - 1 Row, 2 Columns */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-6 sm:mb-8">
           {/* Column 1: Polycab Cables & Wires */}
@@ -82,11 +82,11 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
 
         {/* 2. Split Content Row: Left Overview & Right Alliance Partners (Exact 50/50 Matching Top Banners Width) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
-          
+
           {/* Left Column: Editorial Overview & Institutional Pillars (Matches Col 1 Banner Width Exactly) */}
           <div className="flex flex-col">
             <div className="space-y-4 sm:space-y-4.5 flex flex-col">
-              
+
               {/* Pillar 1: What is EMA */}
               <div className="p-4 sm:p-5 md:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(39,52,133,0.06)] hover:shadow-md hover:border-[#273485]/40 transition-all">
                 <span className="text-[10px] sm:text-[11px] font-bold text-[#273485] tracking-wider uppercase block mb-1.5">
@@ -188,12 +188,12 @@ export default function AboutAndSponsorsSection({ onOpenAbout, onOpenJoin, onOpe
             <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Estd. Year (90th Granite Jubilee)</p>
           </div>
           <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#DB1E36]/40 transition-all text-center group">
-            <p className="text-2xl sm:text-3xl font-black text-[#DB1E36] tracking-tight group-hover:scale-105 transition-transform">Thousands</p>
-            <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Connected Electrical Traders</p>
+            <p className="text-2xl sm:text-3xl font-black text-[#DB1E36] tracking-tight group-hover:scale-105 transition-transform">1,100+</p>
+            <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Members</p>
           </div>
           <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#273485]/40 transition-all text-center group">
-            <p className="text-2xl sm:text-3xl font-black text-[#273485] tracking-tight group-hover:scale-105 transition-transform">Apex Forum</p>
-            <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Trade Welfare &amp; Arbitration</p>
+            <p className="text-2xl sm:text-3xl font-black text-[#273485] tracking-tight group-hover:scale-105 transition-transform">5</p>
+            <p className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-1">Affiliations</p>
           </div>
         </div>
 

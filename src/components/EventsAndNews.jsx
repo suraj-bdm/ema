@@ -116,11 +116,10 @@ export default function EventsAndNews({ onSelectEvent, onSelectNews }) {
                 <div
                   key={evt.id}
                   onClick={() => onSelectEvent && onSelectEvent(evt)}
-                  className={`bg-white rounded-2xl border border-slate-200/80 p-3.5 sm:p-4 shadow-[0_2px_12px_-2px_rgba(39,52,133,0.04)] hover:shadow-md hover:border-[#273485]/40 hover:-translate-y-0.5 transition-all flex flex-col justify-between group cursor-pointer ${
-                    idx === 0
+                  className={`bg-white rounded-2xl border border-slate-200/80 p-3.5 sm:p-4 shadow-[0_2px_12px_-2px_rgba(39,52,133,0.04)] hover:shadow-md hover:border-[#273485]/40 hover:-translate-y-0.5 transition-all flex flex-col justify-between group cursor-pointer ${idx === 0
                       ? 'sm:col-span-2 bg-gradient-to-br from-white via-white to-amber-50/40 border-[#273485]/20'
                       : ''
-                  }`}
+                    }`}
                 >
                   {idx === 0 && (
                     <div className="flex items-center justify-between mb-2 pb-2 border-b border-slate-100">
